@@ -16,7 +16,7 @@ const LoginPage = () => {
         axios.post(`${baseUrl}/api/v1/admin/adminlogin`,admin).then((res)=>{
           if(res.status ==200){
             localStorage.setItem('adminLogin',res?.data?.token)
-          navigate('/dashboard')
+          navigate('/')
           Swal.fire({
             title: res.data.message,
             icon: "success"
