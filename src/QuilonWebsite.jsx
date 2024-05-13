@@ -20,14 +20,14 @@ import OrderDetailsPage from './pages/orderDetailsPage/OrderDetailsPage.jsx'
 const QuilonWebsite = () => {
   const Protected = () => {
     const token = localStorage.getItem('adminLogin')
-    return token ? <Outlet /> : <Navigate to='/admin/login' />
+    return token ? <Outlet /> : <Navigate to='/login' />
   }
 
   return (
     <BrowserRouter>
       <Routes>
         <Route element={<Protected />}>
-          <Route path='/admin/dashboard' element={<Dashboard />} />
+          <Route path='/' element={<Dashboard />} />
           <Route path='/admin/customers' element={<UserListingPage />} />
           <Route path='/admin/add-product' element={<AddProductPage />} />
           <Route path='/admin/categories' element={<CategoryList />} />
