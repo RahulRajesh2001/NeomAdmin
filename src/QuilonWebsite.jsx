@@ -43,7 +43,7 @@ const QuilonWebsite = () => {
           <Route path='/admin/order/:id' element={<OrderDetailsPage/>}/>
           <Route />
         </Route>
-        <Route path='/admin/login' element={<LoginPage/>} />
+        <Route path='/login' element={<LoginPage/>} />
       </Routes>
     </BrowserRouter>
   )
